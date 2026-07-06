@@ -11,16 +11,28 @@ const updateHeader = () => {
 };
 
 if (menuToggle && header && nav) {
+  menuToggle.setAttribute("aria-expanded", "false");
+
+  const closeMenu = () => {
+    header.classList.remove("is-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", isEnglish ? "Open menu" : "Ouvrir le menu");
+  };
+
   menuToggle.addEventListener("click", () => {
     const isOpen = header.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuToggle.setAttribute("aria-label", isOpen ? (isEnglish ? "Close menu" : "Fermer le menu") : (isEnglish ? "Open menu" : "Ouvrir le menu"));
   });
 
   nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      header.classList.remove("is-open");
-      menuToggle.setAttribute("aria-label", isEnglish ? "Open menu" : "Ouvrir le menu");
-    });
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
   });
 }
 
