@@ -1259,6 +1259,21 @@ textarea:focus {
   opacity: 1;
 }
 
+@media (max-width: 1120px) {
+  .nav {
+    gap: 10px;
+    font-size: 0.82rem;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .lang-switch {
+    margin-left: auto;
+  }
+}
+
 @media (max-width: 980px) {
   .site-header {
     height: 68px;
