@@ -102,9 +102,10 @@ textarea {
 }
 
 .brand-logo {
-  width: 46px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .brand-text {
@@ -1217,12 +1218,10 @@ textarea:focus {
 }
 
 .footer-brand .brand-logo {
-  width: 64px;
-  height: 54px;
+  width: 58px;
+  height: 58px;
   padding: 0;
-  filter:
-    drop-shadow(0 0 10px rgba(255, 255, 255, 0.18))
-    drop-shadow(0 14px 24px rgba(10, 102, 255, 0.24));
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.28));
 }
 
 .footer-brand .brand-text {
