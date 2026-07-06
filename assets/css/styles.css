@@ -1283,6 +1283,10 @@ textarea:focus {
     height: 68px;
   }
 
+  .site-header .brand-text {
+    display: inline;
+  }
+
   .nav {
     position: fixed;
     top: 68px;
