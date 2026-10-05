@@ -1,45 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://muhimu.com/</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/about.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/services.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/solutions.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/finance-erp.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/blog.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/contact.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/en/</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/en/about.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/en/services.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/en/solutions.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/en/finance-erp.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/en/blog.html</loc>
-  </url>
-  <url>
-    <loc>https://muhimu.com/en/contact.html</loc>
-  </url>
+<url><loc>https://muhimu.tech/</loc></url>
+<url><loc>https://muhimu.tech/index.html</loc></url>
+<url><loc>https://muhimu.tech/services.html</loc></url>
+<url><loc>https://muhimu.tech/solutions.html</loc></url>
+<url><loc>https://muhimu.tech/entreprise.html</loc></url>
+<url><loc>https://muhimu.tech/blog.html</loc></url>
+<url><loc>https://muhimu.tech/contact.html</loc></url>
+<url><loc>https://muhimu.tech/en/</loc></url>
+<url><loc>https://muhimu.tech/en/services.html</loc></url>
+<url><loc>https://muhimu.tech/en/solutions.html</loc></url>
+<url><loc>https://muhimu.tech/en/entreprise.html</loc></url>
+<url><loc>https://muhimu.tech/en/finance-erp.html</loc></url>
+<url><loc>https://muhimu.tech/en/blog.html</loc></url>
+<url><loc>https://muhimu.tech/en/contact.html</loc></url>
 </urlset>

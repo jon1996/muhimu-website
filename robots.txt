@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://muhimu.com/sitemap.xml
+Sitemap: https://muhimu.tech/sitemap.xml

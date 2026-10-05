@@ -1,0 +1,11 @@
+.git
+.agents
+.openai
+.env
+.env.*
+node_modules
+output
+jk
+tools
+*.zip
+*.log

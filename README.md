@@ -1,86 +1,27 @@
-# Muhimu Technologie Website
+# Muhimu Technologie
 
-Site internet officiel de Muhimu Technologie : présentation de l'entreprise, services digitaux, solutions, actualités et contact.
+Site statique orienté technologie financière : ERP SYSCOHADA, facturation, trésorerie et reporting.
 
-## Structure
+Les nouvelles pages françaises sont index.html, services.html, solutions.html, entreprise.html et contact.html. Le blog et les pages anglaises adoptent le même design animé et le même positionnement fintech / ERP SYSCOHADA. Les anciennes adresses about.html et finance-erp.html redirigent vers leurs nouvelles destinations.
 
-```text
-.
-├── index.html
-├── about.html
-├── services.html
-├── solutions.html
-├── finance-erp.html
-├── blog.html
-├── contact.html
-├── en/
-│   ├── index.html
-│   ├── about.html
-│   ├── services.html
-│   ├── solutions.html
-│   ├── finance-erp.html
-│   ├── blog.html
-│   └── contact.html
-├── assets/
-│   ├── css/styles.css
-│   ├── js/main.js
-│   └── images/
-│       ├── favicon.svg
-│       ├── hero-muhimu-tech-jk-style.webp
-│       ├── muhimu-logo-full.png
-│       ├── muhimu-logo-symbol-dark.png
-│       └── muhimu-logo-symbol-transparent.png
-├── Dockerfile
-├── nginx.conf
-└── README.md
-```
+## Prévisualisation
 
-## Lancer localement
+Depuis ce dossier, lancer `python -m http.server 8000`, puis ouvrir http://localhost:8000. Aucun build npm requis.
 
-Le site est statique. Vous pouvez ouvrir directement `index.html` dans un navigateur.
+## Docker / Nginx
 
-Option avec un serveur local si Python 3 est disponible :
+Construire : `docker build -t muhimu-website .`
 
-```powershell
-cd "C:\Users\surface pro7\Documents\muhimu website"
-python -m http.server 8000
-```
+Tester sur un port disponible : `docker run --rm -p 8080:80 muhimu-website`
 
-Sur cette machine, si `python --version` affiche Python 2.7, utilisez plutôt :
+Ouvrir http://localhost:8080 et vérifier les pages avant de remplacer le conteneur de production. Adapter le lancement à la configuration existante du VPS (réseau, reverse proxy, ports, Docker Compose). Le certificat HTTPS et le reverse proxy public restent gérés par le serveur existant. Conserver l'ancienne image pour un retour arrière.
 
-```powershell
-cd "C:\Users\surface pro7\Documents\muhimu website"
-python -m SimpleHTTPServer 8000
-```
+Nginx accepte les liens avec ou sans .html, compresse CSS/JavaScript/SVG et revalide les ressources entre les versions. .dockerignore exclut les métadonnées Git et les fichiers de travail de l'image.
 
-Puis ouvrir :
+## Contact
 
-```text
-http://localhost:8000
-```
+Le formulaire crée un brief local : copie, téléchargement et ouverture du logiciel de messagerie vers info@muhimu.tech. Il ne transmet pas automatiquement un message au serveur. Une API est nécessaire pour un envoi direct.
 
-## Déploiement Docker/Nginx
+## Maintenance
 
-Construire l'image :
-
-```powershell
-docker build -t muhimu-website .
-```
-
-Lancer le conteneur :
-
-```powershell
-docker run --rm -p 8080:80 muhimu-website
-```
-
-Puis ouvrir :
-
-```text
-http://localhost:8080
-```
-
-## Préparation backend
-
-Le formulaire de contact est actuellement statique. Pour connecter un backend plus tard, remplacer la logique dans `assets/js/main.js` par un appel `fetch()` vers une API, par exemple `/api/contact`.
-
-Les cartes du blog sont structurées pour pouvoir être générées depuis une API, un CMS ou un fichier JSON.
+Les pages françaises utilisent style.css et app.js à la racine. Les pages anglaises partagent style.css et utilisent app.en.js pour les interactions en anglais. Le blog propose trois guides consultables directement sur la page. Le logo officiel est décliné en WebP 1x/2x/4x ; le favicon SVG est conservé.
